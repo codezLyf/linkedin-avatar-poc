@@ -10,7 +10,13 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 st.title("👤 Virtual LinkedIn Avatar PoC")
 st.markdown("Chat with an AI avatar generated from a LinkedIn profile.")
 
-profile_text = st.text_area("Paste LinkedIn About / Summary:", height=150)
+profile_text = st.text_area("""Marketing leader with over 10+ years of experience in leading marketing and growth functions, crafting consumer journeys, and optimizing marketing funnels to achieve better ROI. I specialize in digital and performance marketing, brand marketing, and go-to-market strategies across various industries and geographies. 
+
+My expertise stems from my diverse and global perspective, having managed marketing campaigns in B2C EdTech, B2B Fintech, Healthcare, Real Estate, and D2C FMCG sectors. My work has spanned key markets in the US, UK, Canada, UAE, and India. My experience involves managing multi-channel marketing campaigns on platforms like Google/SEM, Facebook, Instagram/paid social/SMM, LinkedIn, and TikTok, SEO. 
+
+As a results-oriented leader, I thrive on leading cross-functional teams and driving them towards shared goals. I am also deeply passionate about leveraging data and emerging technologies to make informed decisions and drive sustainable growth. 
+
+My mission is to create value for customers and stakeholders through innovative and impactful marketing solutions.""", height=150)
 
 mode = st.radio("Choose Interaction Mode:", ["Recruiter Q&A", "Client Inquiry"])
 user_input = st.text_input("Your message:", placeholder="Ask about skills or services...")
